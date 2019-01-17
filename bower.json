@@ -1,0 +1,22 @@
+{
+  "name": "CodeAgenda",
+  "description": "Agenda Telefônica",
+  "main": "",
+  "authors": [
+    "Gabriel Schenato <gabrielschenato152@hotmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/schenato/CodeAgenda",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.4.0",
+    "fontawesome": "^5.6.3"
+  }
+}
