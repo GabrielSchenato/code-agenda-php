@@ -15,7 +15,7 @@ class CreatePessoasTable extends Migration
     {
         Schema::create('pessoas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome');
+            $table->string('nome')->unique();
             $table->string('apelido', 50);
             $table->enum('sexo', ['F', 'M']);
             $table->timestamps();
