@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs;
+namespace CodeAgenda\Jobs;
 
 class ExampleJob extends Job
 {

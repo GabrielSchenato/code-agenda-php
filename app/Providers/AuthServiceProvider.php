@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Providers;
+namespace CodeAgenda\Providers;
 
-use App\User;
+use CodeAgenda\User;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 

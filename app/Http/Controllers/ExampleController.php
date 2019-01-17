@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace CodeAgenda\Http\Controllers;
 
 class ExampleController extends Controller
 {
