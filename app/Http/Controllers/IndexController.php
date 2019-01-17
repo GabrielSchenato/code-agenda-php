@@ -2,7 +2,7 @@
 
 namespace CodeAgenda\Http\Controllers;
 
-class ExampleController extends Controller
+class IndexController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -13,6 +13,9 @@ class ExampleController extends Controller
     {
         //
     }
-
-    //
+    
+    public function index ()
+    {
+        return view('layout');
+    }
 }
