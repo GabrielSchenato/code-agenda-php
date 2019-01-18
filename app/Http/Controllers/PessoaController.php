@@ -4,7 +4,7 @@ namespace CodeAgenda\Http\Controllers;
 
 use CodeAgenda\Pessoa;
 
-class IndexController extends Controller {
+class PessoaController extends Controller {
 
     /**
      * Create a new controller instance.
@@ -15,9 +15,9 @@ class IndexController extends Controller {
         //
     }
 
-    public function index($letra = "A") {
-        $pessoas = Pessoa::where('apelido', 'like', $letra.'%')->get();
-        return view('agenda', compact('pessoas'));
+    public function destroy($id) {
+        Pessoa::destroy($id);
+        return redirect()->route('agenda.index');
     }
 
 }

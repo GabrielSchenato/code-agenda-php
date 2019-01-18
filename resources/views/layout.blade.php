@@ -19,9 +19,9 @@
                         Code.Schenato <br/>
                         <small><i class="glyphicon glyphicon-phone-alt"></i> Agenda Telefônica</small>
                         <span class="pull-right">
-                            <form class="form-inline" action="#" method="post">
+                            <form class="form-inline" action="{{ route('agenda.busca') }}" method="post">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Pesquisar Contato...">
+                                    <input type="text" name="busca" class="form-control" placeholder="Pesquisar Contato...">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" type="button"><i class="fas fa-search" aria-hidden="true"></i></button>
                                     </span>

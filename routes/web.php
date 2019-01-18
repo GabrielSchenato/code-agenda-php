@@ -11,5 +11,27 @@
 |
 */
 
-$router->get('/', ['as' => 'agenda.index', 'uses' => 'IndexController@index']);
-$router->get('/{letra}', ['as' => 'agenda.letra', 'uses' => 'IndexController@index']);
+$router->get('/', [
+    'as' => 'agenda.index',
+    'uses' => 'AgendaController@index'
+]);
+
+$router->get('/{letra}', [
+    'as' => 'agenda.letra',
+    'uses' => 'AgendaController@index'
+]);
+
+$router->get('/busca', [
+    'as' => 'agenda.busca',
+    'uses' => 'AgendaController@busca'
+]);
+
+$router->get('/contato/{id}/apagar', [
+    'as' => 'pessoa.destroy',
+    'uses' => 'PessoaController@destroy'
+]);
+
+$router->get('/telefone/{id}/apagar', [
+    'as' => 'telefone.destroy',
+    'uses' => 'TelefoneController@destroy'
+]);
