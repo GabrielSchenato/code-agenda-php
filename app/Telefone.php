@@ -16,6 +16,11 @@ class Telefone extends Model {
     protected $fillable = [
         'descricao', 'codpais', 'ddd', 'prefixo', 'sufixo'
     ];
+    
+    public function pessoa()
+    {
+        return $this->belongsTo(Pessoa::class);
+    }
 
     public function getNumeroAttribuite() 
     {

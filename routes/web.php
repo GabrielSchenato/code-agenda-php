@@ -37,6 +37,11 @@ $router->delete('/contato/{id}', [
 ]);
 
 $router->get('/telefone/{id}/apagar', [
+    'as' => 'telefone.delete',
+    'uses' => 'TelefoneController@delete'
+]);
+
+$router->delete('/telefone/{id}', [
     'as' => 'telefone.destroy',
     'uses' => 'TelefoneController@destroy'
 ]);

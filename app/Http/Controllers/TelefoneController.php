@@ -11,11 +11,20 @@ class TelefoneController extends Controller {
      *
      * @return void
      */
-    public function __construct() {
+    public function __construct() 
+    {
         //
     }
 
-    public function destroy($id) {
+    public function delete($id) 
+    {
+        $telefone = Telefone::find($id);
+        $pessoa = $telefone->pessoa;
+        return view('telefone.delete', compact('telefone', 'pessoa'));
+    }
+    
+    public function destroy($id) 
+    {
         Telefone::destroy($id);
         return redirect()->route('agenda.index');
     }
