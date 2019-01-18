@@ -21,9 +21,9 @@
                         <span class="pull-right">
                             <form class="form-inline" action="{{ route('agenda.busca') }}" method="post">
                                 <div class="input-group">
-                                    <input type="text" name="busca" class="form-control" placeholder="Pesquisar Contato...">
+                                    <input type="text" name="busca" id="busca" class="form-control" placeholder="Pesquisar Contato...">
                                     <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button"><i class="fas fa-search" aria-hidden="true"></i></button>
+                                        <button class="btn btn-default" type="submit"><i class="fas fa-search" aria-hidden="true"></i></button>
                                     </span>
                                 </div>
                             </form>
@@ -33,7 +33,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    @foreach(range('A', 'Z') as $letra)
+                    @foreach($letras as $letra)
                         <a href="{{ route('agenda.letra', ['letra' => $letra]) }}" class="btn btn-primary btn-xs">{{ $letra }}</a>
                     @endforeach
                 </div>

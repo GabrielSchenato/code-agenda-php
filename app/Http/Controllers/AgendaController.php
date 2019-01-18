@@ -3,8 +3,9 @@
 namespace CodeAgenda\Http\Controllers;
 
 use CodeAgenda\Pessoa;
+use Illuminate\Http\Request;
 
-class IndexController extends Controller {
+class AgendaController extends Controller {
 
     /**
      * Create a new controller instance.
@@ -23,7 +24,7 @@ class IndexController extends Controller {
         return view('agenda', compact('pessoas', 'letras'));
     }
     
-    public function busca(\Laravel\Lumen\Http\Request $request) 
+    public function busca(Request $request) 
     {
         $busca = $request->busca;
         $pessoas = [];

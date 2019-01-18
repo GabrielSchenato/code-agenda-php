@@ -21,7 +21,7 @@ $router->get('/{letra}', [
     'uses' => 'AgendaController@index'
 ]);
 
-$router->get('/busca', [
+$router->post('/busca', [
     'as' => 'agenda.busca',
     'uses' => 'AgendaController@busca'
 ]);

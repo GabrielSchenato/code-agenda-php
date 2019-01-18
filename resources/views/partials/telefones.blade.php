@@ -11,7 +11,6 @@
                     <i class="fas fa-minus-circle"></i>
                 </a>
             </td>
-            <td>{{ $telefone->descricao }}</td>
         </tr>
     @endforeach
 </table>
