@@ -8,7 +8,8 @@ elixir(function (mix) {
             .copy(bowerDir + 'jquery/dist/jquery.js', 'resources/assets/js')
             .scripts([
                 'jquery.js',
-                'bootstrap.js'
+                'bootstrap.js',
+                'custom.js'
             ], 'public/js/scripts.js')
             .less('app.less');
 });

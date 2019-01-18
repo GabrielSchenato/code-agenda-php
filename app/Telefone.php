@@ -17,4 +17,9 @@ class Telefone extends Model {
         'descricao', 'codpais', 'ddd', 'prefixo', 'sufixo'
     ];
 
+    public function getNumeroAttribuite() 
+    {
+        return "{$this->codpais} ({$this->ddd}) {$this->prefixo} {$this->sufixo}";
+    }
+
 }
