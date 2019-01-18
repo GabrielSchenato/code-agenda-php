@@ -2,20 +2,22 @@
 
 namespace CodeAgenda\Http\Controllers;
 
-class IndexController extends Controller
-{
+use CodeAgenda\Pessoa;
+
+class IndexController extends Controller {
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct() {
         //
     }
-    
-    public function index ()
-    {
-        return view('agenda');
+
+    public function index($letra = "A") {
+        $pessoas = Pessoa::where('apelido', 'like', $letra.'%')->get();
+        return view('agenda', compact('pessoas'));
     }
+
 }

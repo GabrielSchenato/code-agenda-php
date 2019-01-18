@@ -1,4 +1,13 @@
 @extends('layout')
+
 @section('content')
-<h1>Olá mundo!</h1>
-@endsection()
+
+    @foreach($pessoas as $pessoa)
+
+        <div class="col-md-6">
+            @include('partials.contato')
+        </div>
+
+    @endforeach
+
+@endsection

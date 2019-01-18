@@ -12,3 +12,4 @@
 */
 
 $router->get('/', ['as' => 'agenda.index', 'uses' => 'IndexController@index']);
+$router->get('/{letra}', ['as' => 'agenda.letra', 'uses' => 'IndexController@index']);
