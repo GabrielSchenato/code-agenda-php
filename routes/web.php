@@ -27,6 +27,11 @@ $router->post('/busca', [
 ]);
 
 $router->get('/contato/{id}/apagar', [
+    'as' => 'pessoa.delete',
+    'uses' => 'PessoaController@delete'
+]);
+
+$router->delete('/contato/{id}', [
     'as' => 'pessoa.destroy',
     'uses' => 'PessoaController@destroy'
 ]);

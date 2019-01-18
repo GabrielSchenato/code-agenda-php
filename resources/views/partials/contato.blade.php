@@ -11,7 +11,7 @@
                 <a href="#" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Editar">
                     <i class="fas fa-edit"></i>
                 </a>
-                <a href="{{ route('pessoa.destroy', ['id' => $pessoa->id]) }}" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Apagar">
+                <a href="{{ route('pessoa.delete', ['id' => $pessoa->id]) }}" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Apagar">
                     <i class="fas fa-times"></i>
                 </a>
             </span>

@@ -8,7 +8,7 @@
         <title>Code Agenda | Schenato</title>
 
         <!-- Bootstrap -->
-        <link href="css/app.css" rel="stylesheet">
+        <link href="{{ url('css/app.css') }}" rel="stylesheet">
 
     </head>
     <body>
@@ -49,6 +49,6 @@
         </div>
 
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/scripts.js"></script>
+        <script src="{{ url('js/scripts.js') }}"></script>
     </body>
 </html>

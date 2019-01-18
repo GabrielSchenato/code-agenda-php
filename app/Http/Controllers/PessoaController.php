@@ -11,11 +11,19 @@ class PessoaController extends Controller {
      *
      * @return void
      */
-    public function __construct() {
+    public function __construct() 
+    {
         //
     }
 
-    public function destroy($id) {
+    public function delete($id) 
+    {
+        $pessoa = Pessoa::find($id);
+        return view('pessoa.delete', compact('pessoa'));
+    }
+    
+    public function destroy($id) 
+    {
         Pessoa::destroy($id);
         return redirect()->route('agenda.index');
     }
