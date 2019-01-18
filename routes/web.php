@@ -11,6 +11,45 @@
 |
 */
 
+/**
+ * Pessoas
+ */
+$router->get('/contato/novo', [
+    'as' => 'pessoa.create',
+    'uses' => 'PessoaController@create'
+]);
+
+$router->post('/contato', [
+    'as' => 'pessoa.store',
+    'uses' => 'PessoaController@store'
+]);
+
+$router->get('/contato/{id}/apagar', [
+    'as' => 'pessoa.delete',
+    'uses' => 'PessoaController@delete'
+]);
+
+$router->delete('/contato/{id}', [
+    'as' => 'pessoa.destroy',
+    'uses' => 'PessoaController@destroy'
+]);
+
+/**
+ * Telefones
+ */
+$router->get('/telefone/{id}/apagar', [
+    'as' => 'telefone.delete',
+    'uses' => 'TelefoneController@delete'
+]);
+
+$router->delete('/telefone/{id}', [
+    'as' => 'telefone.destroy',
+    'uses' => 'TelefoneController@destroy'
+]);
+
+/**
+ * Agenda
+ */
 $router->get('/', [
     'as' => 'agenda.index',
     'uses' => 'AgendaController@index'
@@ -26,22 +65,6 @@ $router->post('/busca', [
     'uses' => 'AgendaController@busca'
 ]);
 
-$router->get('/contato/{id}/apagar', [
-    'as' => 'pessoa.delete',
-    'uses' => 'PessoaController@delete'
-]);
 
-$router->delete('/contato/{id}', [
-    'as' => 'pessoa.destroy',
-    'uses' => 'PessoaController@destroy'
-]);
 
-$router->get('/telefone/{id}/apagar', [
-    'as' => 'telefone.delete',
-    'uses' => 'TelefoneController@delete'
-]);
 
-$router->delete('/telefone/{id}', [
-    'as' => 'telefone.destroy',
-    'uses' => 'TelefoneController@destroy'
-]);
