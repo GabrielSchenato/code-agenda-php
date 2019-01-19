@@ -8,7 +8,7 @@
             @endif
             {{ $pessoa->apelido }}
             <span class="pull-right">
-                <a href="#" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Editar">
+                <a href="{{ route('pessoa.edit', ['id' => $pessoa->id]) }}" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Editar">
                     <i class="fas fa-edit"></i>
                 </a>
                 <a href="{{ route('pessoa.delete', ['id' => $pessoa->id]) }}" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Apagar">

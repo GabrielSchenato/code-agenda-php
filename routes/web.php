@@ -24,6 +24,16 @@ $router->post('/contato', [
     'uses' => 'PessoaController@store'
 ]);
 
+$router->get('/contato/{id}/editar', [
+    'as' => 'pessoa.edit',
+    'uses' => 'PessoaController@edit'
+]);
+
+$router->put('/contato/{id}', [
+    'as' => 'pessoa.update',
+    'uses' => 'PessoaController@update'
+]);
+
 $router->get('/contato/{id}/apagar', [
     'as' => 'pessoa.delete',
     'uses' => 'PessoaController@delete'
